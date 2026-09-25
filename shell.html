@@ -117,6 +117,12 @@ window.PluginChannel=class _PluginChannel{port;channel;pendingRequests=new Map;s
 const GODOT_CONFIG = $GODOT_CONFIG;
 const GODOT_THREADS_ENABLED = $GODOT_THREADS_ENABLED;
 
+// Force the canvas to match RCade's fixed 336x262 display exactly. The
+// exported "Project" resize policy from export_presets.cfg isn't landing
+// in this custom shell's generated config, so pin it here instead of
+// letting Godot's "Adaptive" default leave part of the canvas unrendered.
+GODOT_CONFIG.canvasResizePolicy = 1;
+
 window.RCadeInput = {
   register_classic: async (cb) => {
     const classic_channel = await PluginChannel.acquire("@rcade/input-classic", "^1.0.0");
