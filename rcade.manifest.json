@@ -1,0 +1,18 @@
+{
+  "$schema": "https://rcade.dev/manifest.schema.json",
+  "name": "2d-pong-tester",
+  "display_name": "2D Pong (Test)",
+  "description": "2d-pong-tester",
+  "visibility": "public",
+  "authors": [
+	{
+	  "display_name": "Callista Chang"
+	}
+  ],
+  "dependencies": [
+	{
+	  "name": "@rcade/input-classic",
+	  "version": "1.0.0"
+	}
+  ]
+}
