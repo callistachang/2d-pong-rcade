@@ -1,8 +1,8 @@
 {
   "$schema": "https://rcade.dev/manifest.schema.json",
-  "name": "2d-pong-tester",
-  "display_name": "2D Pong (Test)",
-  "description": "2d-pong-tester",
+  "name": "2d-pong",
+  "display_name": "2D Pong",
+  "description": "A simple implementation of 2D Pong, to test RCade input controls and its deployment process.",
   "visibility": "public",
   "authors": [
 	{

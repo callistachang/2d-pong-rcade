@@ -1,6 +1,6 @@
-# 2D Pong (Test)
+# 2D Pong
 
-2d-pong-tester
+A simple implementation of 2D Pong, to test RCade input controls and its deployment process.
 
 ## About RCade
 

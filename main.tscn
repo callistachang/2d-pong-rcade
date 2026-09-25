@@ -12,11 +12,11 @@ script = ExtResource("4_score")
 [node name="WallTop" parent="." unique_id=354290820 instance=ExtResource("1_1bvp3")]
 
 [node name="WallBottom" parent="." unique_id=877372366 instance=ExtResource("1_1bvp3")]
-position = Vector2(0, 248)
+position = Vector2(0, 270)
 
 [node name="Background" type="ColorRect" parent="." unique_id=2111114667]
-offset_right = 320.0
-offset_bottom = 240.0
+offset_right = 336.0
+offset_bottom = 262.0
 color = Color(0, 0, 0, 1)
 
 [node name="PaddleP1" parent="." unique_id=1106069237 instance=ExtResource("2_0xm2m")]
@@ -25,7 +25,7 @@ position = Vector2(10, 0)
 
 [node name="PaddleP2" parent="." unique_id=2077171535 instance=ExtResource("2_0xm2m")]
 z_index = 1
-position = Vector2(302, 0)
+position = Vector2(318, 0)
 player_id = "p2"
 
 [node name="Ball" parent="." unique_id=1940947078 instance=ExtResource("1_ig7tw")]
@@ -34,18 +34,18 @@ player_id = "p2"
 script = ExtResource("3_ln2dt")
 
 [node name="ScoreP1" type="Label" parent="." unique_id=-1076510595]
-offset_left = 132.0
+offset_left = 140.0
 offset_top = 9.0
-offset_right = 154.0
+offset_right = 162.0
 offset_bottom = 26.0
 theme_override_font_sizes/font_size = 12
 text = "0"
 horizontal_alignment = 1
 
 [node name="ScoreP2" type="Label" parent="." unique_id=-1076510594]
-offset_left = 166.0
+offset_left = 174.0
 offset_top = 9.0
-offset_right = 188.0
+offset_right = 196.0
 offset_bottom = 26.0
 theme_override_font_sizes/font_size = 12
 text = "0"
@@ -53,10 +53,10 @@ horizontal_alignment = 1
 
 [node name="WinnerLabel" type="Label" parent="." unique_id=-1076510593]
 visible = false
-offset_left = 49.0
-offset_top = 111.0
-offset_right = 271.0
-offset_bottom = 129.0
+offset_left = 57.0
+offset_top = 122.0
+offset_right = 279.0
+offset_bottom = 140.0
 theme_override_font_sizes/font_size = 13
 text = "P1 WINS — press R to restart"
 horizontal_alignment = 1
