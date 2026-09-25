@@ -1,14 +1,62 @@
 [gd_scene format=3 uid="uid://cqow47bch5ocs"]
 
-[ext_resource type="Script" uid="uid://mf66bxpxm1ae" path="res://scripts/player.gd" id="1_0xm2m"]
-[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://jdmqraslh3ls" path="res://wall.tscn" id="1_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://dp4sdbej07rmp" path="res://ball.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://cf3dxh5cwsjn6" path="res://paddle.tscn" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://d302ccl53w4sr" path="res://scripts/center_line.gd" id="3_ln2dt"]
+[ext_resource type="Script" uid="uid://bq2n8w5xk3trp" path="res://scripts/main.gd" id="4_score"]
 
-[node name="Node2D" type="Node" unique_id=422408999]
+[node name="Main" type="Node2D" unique_id=481892613]
+script = ExtResource("4_score")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1727476714]
-position = Vector2(161, 141)
-script = ExtResource("1_0xm2m")
+[node name="WallTop" parent="." unique_id=354290820 instance=ExtResource("1_1bvp3")]
 
-[node name="Icon" type="Sprite2D" parent="CharacterBody2D" unique_id=1138456137]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_ig7tw")
+[node name="WallBottom" parent="." unique_id=877372366 instance=ExtResource("1_1bvp3")]
+position = Vector2(0, 248)
+
+[node name="Background" type="ColorRect" parent="." unique_id=2111114667]
+offset_right = 320.0
+offset_bottom = 240.0
+color = Color(0, 0, 0, 1)
+
+[node name="PaddleP1" parent="." unique_id=1106069237 instance=ExtResource("2_0xm2m")]
+z_index = 1
+position = Vector2(10, 0)
+
+[node name="PaddleP2" parent="." unique_id=2077171535 instance=ExtResource("2_0xm2m")]
+z_index = 1
+position = Vector2(302, 0)
+player_id = "p2"
+
+[node name="Ball" parent="." unique_id=1940947078 instance=ExtResource("1_ig7tw")]
+
+[node name="Line2D" type="Node2D" parent="." unique_id=965766778]
+script = ExtResource("3_ln2dt")
+
+[node name="ScoreP1" type="Label" parent="." unique_id=-1076510595]
+offset_left = 132.0
+offset_top = 9.0
+offset_right = 154.0
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 12
+text = "0"
+horizontal_alignment = 1
+
+[node name="ScoreP2" type="Label" parent="." unique_id=-1076510594]
+offset_left = 166.0
+offset_top = 9.0
+offset_right = 188.0
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 12
+text = "0"
+horizontal_alignment = 1
+
+[node name="WinnerLabel" type="Label" parent="." unique_id=-1076510593]
+visible = false
+offset_left = 49.0
+offset_top = 111.0
+offset_right = 271.0
+offset_bottom = 129.0
+theme_override_font_sizes/font_size = 13
+text = "P1 WINS — press R to restart"
+horizontal_alignment = 1
